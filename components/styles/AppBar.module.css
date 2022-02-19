@@ -1,3 +1,9 @@
 .glassmorphism{
     @apply bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60;
 }
+.border{
+    border-bottom: 1px solid #252626;
+}
+.borderSidebar{
+    border: 1px solid #252626;
+}
