@@ -17,7 +17,7 @@ const externalLinkIcon = (
 
 export default function Layout({ children }) {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-white dark:bg-black text-black dark:text-white">
       <AppBar />
       <div>{children}</div>
       <footer className={`${footerStyles.footer} flex justify-evenly`}>
