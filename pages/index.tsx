@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <AppBar/>
-        <div className={`sm:text-8xl text-4xl font-extrabold animationPulseColor`}>
+        <div className={`sm:text-8xl text-6xl font-extrabold animationPulseColor`}>
           <p>Blogs</p>
           <p>Tutorials</p>
           <p>Portfolio</p>
