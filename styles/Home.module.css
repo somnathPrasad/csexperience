@@ -1,3 +1,7 @@
+.textShadow{
+  text-shadow: 1px 10px 10px aqua;
+}
+
 .container {
   padding: 0 2rem;
 }

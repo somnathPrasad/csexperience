@@ -1,3 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animationPulseColor{
+  animation: pulse-color 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-color {
+  0%{
+    color: aquamarine;
+  }
+  100% {
+    color: aqua;
+  }
+  /* 50%{
+    color: #577BC1;
+  } */
+  /* 75%{
+      color: #344CB7;
+  } */
+  /* 100%{
+      color: #000957;
+  } */
+}
+
 html,
 body {
   padding: 0;
