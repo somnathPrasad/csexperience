@@ -1,19 +1,16 @@
 import { NextPage } from "next";
 import Link from "next/link";
 import styles from "./styles/AppBar.module.css";
-import Image from "next/image";
 import { useState } from "react";
-import { useTheme } from "next-themes";
+import { useDarkTheme } from "../lib/hooks/useDarkTheme";
 
 
-const menuIcon = (
-  <Image src="/menu-icon.svg" alt="menu icon" width={35} height={30} />
-);
+import ThemeSwitch from "./ThemeSwitch";
 
 const AppBar: NextPage = () => {
-  const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, mounted, setTheme] = useDarkTheme();
+
   return (
     <>
       <div
@@ -35,35 +32,7 @@ const AppBar: NextPage = () => {
         </div>
         <div>
           <div>
-            <div className="flex sm:justify-center justify-start px-5">
-              <button
-                type="button"
-                className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 sm:ring-4 ring-gray-700 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-                onClick={() => {setTheme(theme === "dark" ? "light" : "dark");setIsDark(!isDark)}}
-              >
-                <svg
-                  className={`${!isDark&&"hidden"} w-8 h-8`}
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                </svg>
-                <svg
-                  id="theme-toggle-light-icon"
-                  className={`${isDark&&"hidden"} w-8 h-8`}
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-            </div>
+            <ThemeSwitch/>
           </div>
         </div>
         <div className="sm:hidden flex justify-end items-center">
@@ -71,7 +40,15 @@ const AppBar: NextPage = () => {
             className="px-3 z-20"
             onClick={() => setIsOpen((prevValue) => !prevValue)}
           >
-            {menuIcon}
+            <svg
+              fill={`${isDark? "#ffffff" : "#6b7280"}`}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 30 30"
+              width="30px"
+              height="30px"
+            >
+              <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
+            </svg>
           </div>
         </div>
       </div>

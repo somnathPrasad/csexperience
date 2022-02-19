@@ -5,6 +5,6 @@
   }
 
   /* color: rgb(254 202 202 */
-.childHover td:hover{
+.childHover li:hover{
   color: rgb(34 211 238);
 }
