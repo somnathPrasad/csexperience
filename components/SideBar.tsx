@@ -5,7 +5,7 @@ import appBarStyles from "./styles/AppBar.module.css";
 const SideBar = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <div
-      className={`top-[3.4rem] right-0 sm:hidden fixed ${
+      className={`top-[3rem] right-0 sm:hidden fixed ${
         appBarStyles.glassmorphism
       } w-48 h-screen  ${
         appBarStyles.borderSidebar

@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <footer className={`${footerStyles.footer} flex justify-evenly`}>
       <div>
-        <h1 className="text-xl">Portfolio</h1>
-        <ul className={`text-lg ${footerStyles.childHover} text-left`}>
+        <h1 className="text-lg">Portfolio</h1>
+        <ul className={`text-base ${footerStyles.childHover} text-left`}>
           <li>
             <Link href="/">
               <a>Home</a>
@@ -27,8 +27,8 @@ const Footer = () => {
         </ul>
       </div>
       <div>
-        <h1 className="text-xl">Social</h1>
-        <ul className={`flex flex-col text-lg ${footerStyles.childHover} text-left`}>
+        <h1 className="text-lg">Social</h1>
+        <ul className={`flex flex-col text-base ${footerStyles.childHover} text-left`}>
           <li>
             <Link href="https://www.linkedin.com/in/somnath-prasad/">
               <a target="_blank" className="flex">

@@ -6,13 +6,12 @@ import ThemeSwitch from "./ThemeSwitch";
 import MenuIcon from "./svg/MenuIcon";
 import SideBar from "./SideBar";
 
-const AppBar: NextPage = () => {
+export default function AppBar(){
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <div
-        className={`h-fit fixed top-0 left-0 w-screen sm:py-6 py-3 sm:text-2xl ${styles.glassmorphism} ${styles.border} grid grid-rows-1 grid-cols-2`}
+        className={`h-fit fixed top-0 left-0 w-screen sm:py-5 py-2 sm:text-lg ${styles.glassmorphism} ${styles.border} grid grid-rows-1 grid-cols-2`}
       >
         <div className="sm:flex hidden justify-around items-center">
           <Link href="/">
@@ -43,4 +42,3 @@ const AppBar: NextPage = () => {
     </>
   );
 };
-export default AppBar;
