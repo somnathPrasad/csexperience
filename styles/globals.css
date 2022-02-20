@@ -2,32 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-.animationPulseColor{
+.animationPulseColor_border {
   animation: pulse-color 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes pulse-color {
-  0%{
-    color:blueviolet;
+  0% {
+    border-color: #00ffff;
   }
+  25% {
+    border-color: #97fba0;
+  }
+  50% {
+    border-color: #97b1fb;
+  }
+  /* 75% {
+    border-color: #344cb7;
+  } */
   100% {
-    color: aqua;
+    border-color: #00ffff;
   }
-  /* 50%{
-    color: #577BC1;
-  } */
-  /* 75%{
-      color: #344CB7;
-  } */
-  /* 100%{
-      color: #000957;
-  } */
 }
 
 .mainTextAnimation {
   color: #000;
   background: rgba(255, 253, 160, 1);
-  background: -webkit-linear-gradient( left, #00ffff 0%, #97fba0 25%, #97b1fb 50%, #00ffff 100%) repeat;
+  background: -webkit-linear-gradient(
+      left,
+      #00ffff 0%,
+      #97fba0 25%,
+      #97b1fb 50%,
+      #00ffff 100%
+    )
+    repeat;
   -webkit-background-clip: text;
   -ms-background-clip: text;
   -moz-background-clip: text;
