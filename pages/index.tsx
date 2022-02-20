@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import AppBar from "../components/AppBar";
 import Layout from "../components/layout";
-import Link from "next/link";
 
 
 const Home: NextPage = () => {
@@ -18,7 +15,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div
-          className={`sm:text-8xl text-6xl font-extrabold animationPulseColor`}
+          className={`sm:text-9xl text-7xl font-black text-center mainTextAnimation`}
         >
           <p>Blogs</p>
           <p>Tutorials</p>
