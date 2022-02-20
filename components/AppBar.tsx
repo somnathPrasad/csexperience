@@ -17,7 +17,7 @@ export default function AppBar(){
           <Link href="/">
             <a className="hover:text-cyan-400 ">Home</a>
           </Link>
-          <Link href="/posts/first-post">
+          <Link href="/blogs">
             <a className="hover:text-cyan-400 ">Blogs</a>
           </Link>
           <Link href="/tutorials">
