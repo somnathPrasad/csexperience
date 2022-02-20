@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import Link from "next/link";
 import styles from "./styles/AppBar.module.css";
 import { useState } from "react";
@@ -11,7 +10,7 @@ export default function AppBar(){
   return (
     <>
       <div
-        className={`h-fit fixed top-0 left-0 w-screen sm:py-5 py-2 sm:text-lg ${styles.glassmorphism} ${styles.border} grid grid-rows-1 grid-cols-2`}
+        className={`h-fit fixed top-0 left-0 w-screen sm:py-5 py-2 sm:text-lg ${styles.glassmorphism} sm:border-0 border-b-[1px] border-light-border grid grid-rows-1 grid-cols-2`}
       >
         <div className="sm:flex hidden justify-around items-center">
           <Link href="/">

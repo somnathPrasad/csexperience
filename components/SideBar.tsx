@@ -7,9 +7,7 @@ const SideBar = ({ isOpen }: { isOpen: boolean }) => {
     <div
       className={`top-[3rem] right-0 sm:hidden fixed ${
         appBarStyles.glassmorphism
-      } w-48 h-screen  ${
-        appBarStyles.borderSidebar
-      } z-10 transition ease-in-out duration-300 ${
+      } w-48 h-screen border-l-[1px] border-light-border z-10 transition ease-in-out duration-300 ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >

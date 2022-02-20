@@ -9,6 +9,7 @@ module.exports = {
     extend: {},
     colors: {
       "light-text": "#666",
+      "light-border":"#252626",
     }
   },
   plugins: [require('@tailwindcss/typography')],
